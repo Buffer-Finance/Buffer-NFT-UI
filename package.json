@@ -1,0 +1,47 @@
+{
+  "name": "optopi-csr-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mui/core": "^5.0.0-alpha.54",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.67",
+    "@mui/material": "^5.3.1",
+    "@mui/styles": "^5.3.0",
+    "@rainbow-me/rainbowkit": "^0.8.1",
+    "@thirdweb-dev/react": "^3.7.4",
+    "@thirdweb-dev/sdk": "^3.7.4",
+    "@vercel/analytics": "^0.1.8",
+    "big.js": "^6.2.1",
+    "ethers": "^5.7.2",
+    "jotai": "^2.0.0",
+    "keen-slider": "^6.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.8.0",
+    "react-transition-group": "^4.4.2",
+    "styled-components": "^5.3.3",
+    "swr": "^2.0.3",
+    "wagmi": "^0.10.11"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.32.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-tsconfig-paths": "^3.6.0"
+  }
+}
