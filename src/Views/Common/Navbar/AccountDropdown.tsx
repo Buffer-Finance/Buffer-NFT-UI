@@ -183,8 +183,11 @@ export const ConnectionRequired = ({ children }: { children: ReactNode }) => {
 
               if (chain.unsupported) {
                 return (
-                  <BlueBtn onClick={openChainModal}>
-                    <Wallet className="mr-[6px] ml-1" />
+                  <BlueBtn
+                    onClick={openChainModal}
+                    className="w-fit px-5 min-w-[150px] sm:!text-f14"
+                  >
+                    {/* <Wallet className="" /> */}
                     Switch Network
                   </BlueBtn>
                 );
