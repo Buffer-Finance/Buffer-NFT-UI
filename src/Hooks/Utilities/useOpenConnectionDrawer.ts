@@ -5,6 +5,7 @@ import { isDrawerOpen } from 'src/globalStore';
 import { openDrawer } from '@Utils/appControls/mobileDrawerHandlers';
 import { useNetwork } from 'wagmi';
 import { useActiveChain } from '@Hooks/useActiveChain';
+import { useAccountModal, useConnectModal } from '@rainbow-me/rainbowkit';
 
 const useOpenConnectionDrawer = () => {
   const [, setIsConnectionDrawerOpen] = useAtom(isDrawerOpen);
@@ -13,6 +14,7 @@ const useOpenConnectionDrawer = () => {
   const { chain, chains } = useNetwork();
   const { activeChain } = useActiveChain();
   const activeChainName = activeChain?.name;
+  const { openConnectModal } = useConnectModal();
 
   let shouldConnectWallet = false;
   if (
@@ -29,7 +31,7 @@ const useOpenConnectionDrawer = () => {
     dispatch({ type: 'SET_DRAWER', payload: true });
     openDrawer();
   }
-  return { openWalletDrawer, shouldConnectWallet };
+  return { openWalletDrawer: openConnectModal, shouldConnectWallet };
 };
 
 export default useOpenConnectionDrawer;

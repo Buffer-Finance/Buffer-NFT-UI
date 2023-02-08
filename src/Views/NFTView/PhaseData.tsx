@@ -5,6 +5,7 @@ import { useAtom } from 'jotai';
 import { divide } from '@Utils/NumString/stringArithmatics';
 import { BlueBtn } from '@Views/Common/V2-Button';
 import { nftAtom } from '.';
+import { ConnectionRequired } from '@Views/Common/Navbar/AccountDropdown';
 
 export const PhaseData = ({
   conditions,
@@ -86,29 +87,31 @@ export const ClaimButton = ({
 
   return (
     <div>
-      <BlueBtn
-        onClick={
-          shouldConnectWallet
-            ? openWalletDrawer
-            : () => setIsModalOpen({ isBuyModalOpen: true })
-        }
-        className="w-fit px-5 min-w-[150px] sm:!text-f14"
-        isDisabled={!shouldConnectWallet && isDisabled}
-      >
-        {buttonMsg}
-      </BlueBtn>
-      {conditions &&
-        currentPhase !== null &&
-        !conditions[currentPhase].snapshot && (
-          <div
-            className={`text-2 text-f14 whitespace-nowrap mt-3 ${
-              shouldNotShowMints ? 'text-center' : 'text-right'
-            } sm:!text-center`}
-          >
-            {NftsInCurrentPhase}/
-            {conditions[currentPhase]?.maxClaimablePerWallet}&nbsp;Minted
-          </div>
-        )}
+      <ConnectionRequired>
+        <BlueBtn
+          onClick={
+            shouldConnectWallet
+              ? openWalletDrawer
+              : () => setIsModalOpen({ isBuyModalOpen: true })
+          }
+          className="w-fit px-5 min-w-[150px] sm:!text-f14"
+          isDisabled={!shouldConnectWallet && isDisabled}
+        >
+          {buttonMsg}
+        </BlueBtn>
+        {conditions &&
+          currentPhase !== null &&
+          !conditions[currentPhase].snapshot && (
+            <div
+              className={`text-2 text-f14 whitespace-nowrap mt-3 ${
+                shouldNotShowMints ? 'text-center' : 'text-right'
+              } sm:!text-center`}
+            >
+              {NftsInCurrentPhase}/
+              {conditions[currentPhase]?.maxClaimablePerWallet}&nbsp;Minted
+            </div>
+          )}
+      </ConnectionRequired>
     </div>
   );
 };

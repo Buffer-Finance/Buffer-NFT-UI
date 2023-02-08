@@ -172,7 +172,12 @@ export const ConnectionRequired = ({ children }: { children: ReactNode }) => {
             {(() => {
               if (!connected) {
                 return (
-                  <BlueBtn onClick={openConnectModal}>Connect Wallet</BlueBtn>
+                  <BlueBtn
+                    className="w-fit px-5 min-w-[150px] sm:!text-f14"
+                    onClick={openConnectModal}
+                  >
+                    Connect Wallet
+                  </BlueBtn>
                 );
               }
 
