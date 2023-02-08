@@ -13,7 +13,7 @@ export default defineConfig(({ command, mode }) => {
 
     define: {
       __APP_ENV__: env.APP_ENV,
-      global: 'globalThis',
+      // global: 'globalThis',
       'process.env': {},
     },
   };

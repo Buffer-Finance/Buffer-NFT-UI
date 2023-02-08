@@ -2,7 +2,7 @@ import { Skeleton } from '@mui/material';
 import useOpenConnectionDrawer from '@Hooks/Utilities/useOpenConnectionDrawer';
 import useStopWatch from '@Hooks/Utilities/useStopWatch';
 import { useAtom } from 'jotai';
-import { divide } from '@Utils/utils/NumString/stringArithmatics';
+import { divide } from '@Utils/NumString/stringArithmatics';
 import { BlueBtn } from '@Views/Common/V2-Button';
 import { nftAtom } from '.';
 

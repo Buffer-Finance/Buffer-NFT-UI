@@ -1,6 +1,5 @@
 import { Navbar } from './Views/Common/Navbar';
 import { Routes, Route, Link } from 'react-router-dom';
-import Drawer from '@Views/Common/V2-Drawer';
 import Background from './AppStyles';
 import { Alert, Snackbar } from '@mui/material';
 import { atom, useAtom } from 'jotai';
@@ -20,9 +19,6 @@ function AppComponent() {
           <Link to={'/home'}>Home</Link>
         </ul>
       </div>
-      <Drawer>
-        <></>
-      </Drawer>
     </div>
   );
 }

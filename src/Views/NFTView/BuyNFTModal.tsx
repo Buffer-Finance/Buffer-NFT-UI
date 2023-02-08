@@ -1,6 +1,6 @@
 import { CloseOutlined } from '@mui/icons-material';
 import { Dialog, IconButton } from '@mui/material';
-import { multiply } from '@Utils/utils/NumString/stringArithmatics';
+import { multiply } from '@Utils/NumString/stringArithmatics';
 import BufferInput from '@Views/Common/BufferInput';
 import { BlueBtn } from '@Views/Common/V2-Button';
 import { useAtom } from 'jotai';

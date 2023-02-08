@@ -10,13 +10,8 @@ import { useToast } from '@Contexts/Toast';
 import { useUserAccount } from '@Hooks/useUserAccount';
 import { useAtom } from 'jotai';
 import { useEffect, useMemo } from 'react';
-import {
-  add,
-  gt,
-  lt,
-  multiply,
-} from '@Utils/utils/NumString/stringArithmatics';
-import { convertBNtoString } from '@Utils/utils/useReadCall';
+import { add, gt, lt, multiply } from '@Utils/NumString/stringArithmatics';
+import { convertBNtoString } from '@Utils/useReadCall';
 import { nftAtom, NFTContract } from '.';
 import { useNFTGraph } from './useNFTGraph';
 

@@ -2,7 +2,7 @@ import { useGlobal } from '@Contexts/Global';
 import { useUserAccount } from '@Hooks/useUserAccount';
 import { useAtom } from 'jotai';
 import { isDrawerOpen } from 'src/globalStore';
-import { openDrawer } from '@Utils/utils/appControls/mobileDrawerHandlers';
+import { openDrawer } from '@Utils/appControls/mobileDrawerHandlers';
 import { useNetwork } from 'wagmi';
 import { useActiveChain } from '@Hooks/useActiveChain';
 

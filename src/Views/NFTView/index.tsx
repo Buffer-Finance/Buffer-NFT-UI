@@ -1,9 +1,7 @@
-import { divide } from '@Utils/utils/NumString/stringArithmatics';
-import Drawer from '@Views/Common/V2-Drawer';
+import { divide } from '@Utils/NumString/stringArithmatics';
 import { ClaimedNFT } from './Claimed';
 import { MoleAnimatedSection } from './MoleAnimatedSection';
 import { ClaimButton, PhaseData, WhiteListTag } from './PhaseData';
-// import Head from "next/head";
 import { useNFTData } from './useNFTData';
 import FrontArrow from 'src/SVG/frontArrow';
 import { BuyNFTodal } from './BuyNFTModal';
@@ -17,8 +15,6 @@ import useStopWatch from '@Hooks/Utilities/useStopWatch';
 import { CONTRACTS } from './Address';
 import { TimerBox } from './TimerBox';
 import { getDistance } from '@Hooks/Utilities/stakingUtilities';
-import { ThirdwebSDKProvider } from '@thirdweb-dev/react';
-import { useProvider, useSigner } from 'wagmi';
 
 export const nftAtom = atom<{ isBuyModalOpen: boolean }>({
   isBuyModalOpen: false,
@@ -45,9 +41,6 @@ const NFTView: React.FC<{}> = ({}) => {
       <main className="content-drawer">
         <NFTViewPage />
       </main>
-      <Drawer open={false}>
-        <></>
-      </Drawer>
     </>
   );
 };

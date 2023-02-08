@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import useSWR from 'swr';
-import { multicallv2 } from '@Utils/utils/Contract/multiContract';
+import { multicallv2 } from '@Utils/Contract/multiContract';
 import { useProvider, useSigner } from 'wagmi';
 import getDeepCopy from './getDeepCopy';
 export const useReadCall = ({ contracts }) => {
