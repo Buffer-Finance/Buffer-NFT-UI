@@ -6,6 +6,7 @@ import { baseGraphqlLiteUrl } from 'config';
 
 export const useNFTGraph = () => {
   const { address: account } = useUserAccount();
+  console.log(account, 'account');
   const { data } = useSWR(`nfts-the-graph-account-${account}`, {
     fetcher: async () => {
       const response = await axios.post(baseGraphqlLiteUrl.sandbox, {

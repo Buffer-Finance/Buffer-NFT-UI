@@ -9,6 +9,9 @@ import { useGlobal } from '@Contexts/Global';
 import MenuLogo from '@Assets/Elements/MenuLogo';
 import CloseLogo from '@SVG/Elements/Closelogo';
 import NFTtier from '../NFTtier';
+import { BlueBtn } from '../V2-Button';
+import { Link } from 'react-router-dom';
+import LeaderboardTropy from '@Public/LeaderBoard/Trophy';
 
 interface INavbar {}
 
@@ -72,6 +75,20 @@ export const Navbar: React.FC<INavbar> = () => {
             Mainnet
           </BlueBtn>
         )} */}
+        <BlueBtn
+          onClick={() => {
+            window.open(
+              'https://app.buffer.finance/#/leaderboard/weekly',
+              '_blank'
+            );
+          }}
+          className="!h-[30px] rounded-[6px] w-fit !text-f13 font-medium hover:brightness-125 hover:!translate-y-[0px] pl-4 pr-5 sm:pl-1 sm:pr-1"
+        >
+          {/* <Link to="/leaderboard/weekly" className="flex items-center gap-1"> */}
+          <LeaderboardTropy height={23} />
+          <span className="sm:hidden">Contest</span>
+          {/* </Link> */}
+        </BlueBtn>
 
         <div id="dropdown-box" className="flex gap-4 items-center text-1">
           {/* <ChainDropdown /> */}
