@@ -23,12 +23,7 @@ export const getTabs = () => {
         subTabs: [],
         isExternalLink: true,
       },
-      {
-        to: `https://testnet.buffer.finance/`,
-        name: 'Practice Trading',
-        subTabs: [],
-        isExternalLink: true,
-      },
+
       {
         to: `https://app.buffer.finance/#/dashboard`,
         name: 'Dashboard',
@@ -38,6 +33,18 @@ export const getTabs = () => {
       {
         to: `https://app.buffer.finance/#/referral`,
         name: 'Referral',
+        subTabs: [],
+        isExternalLink: true,
+      },
+      {
+        to: `https://testnet.buffer.finance/`,
+        name: 'Practice Trading',
+        subTabs: [],
+        isExternalLink: true,
+      },
+      {
+        to: `https://stats.buffer.finance/`,
+        name: 'Stats',
         subTabs: [],
         isExternalLink: true,
       },
@@ -57,12 +64,6 @@ export const getTabs = () => {
         isExternalLink: true,
       },
       {
-        to: `https://testnet.buffer.finance/`,
-        name: 'Practice Trading',
-        subTabs: [],
-        isExternalLink: true,
-      },
-      {
         to: `https://app.buffer.finance/#/dashboard`,
         name: 'Dashboard',
         subTabs: [],
@@ -71,6 +72,18 @@ export const getTabs = () => {
       {
         to: `https://app.buffer.finance/#/referral`,
         name: 'Referral',
+        subTabs: [],
+        isExternalLink: true,
+      },
+      {
+        to: `https://testnet.buffer.finance/`,
+        name: 'Practice Trading',
+        subTabs: [],
+        isExternalLink: true,
+      },
+      {
+        to: `https://stats.buffer.finance/`,
+        name: 'Stats',
         subTabs: [],
         isExternalLink: true,
       },
