@@ -48,6 +48,12 @@ export const getTabs = () => {
         subTabs: [],
         isExternalLink: true,
       },
+      {
+        to: `https://app.buffer.finance/#/profile`,
+        name: 'Profile',
+        subTabs: [],
+        isExternalLink: true,
+      },
     ];
   } else
     return [
@@ -84,6 +90,12 @@ export const getTabs = () => {
       {
         to: `https://stats.buffer.finance/`,
         name: 'Stats',
+        subTabs: [],
+        isExternalLink: true,
+      },
+      {
+        to: `https://app.buffer.finance/#/profile`,
+        name: 'Profile',
         subTabs: [],
         isExternalLink: true,
       },
