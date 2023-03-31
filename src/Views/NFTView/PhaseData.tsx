@@ -34,7 +34,7 @@ export const PhaseData = ({
             <Phases activePhase={currentPhase} conditions={conditions} />
             <div className="flex flex-col gap-5 items-end sm:!items-center sm:w-full sm:gap-y-5 sm:mt-[35px] sm:flex-col">
               <div className="text-1 text-f22 flex flex-col items-center  sm:items-center ">
-                {totalMinted}/2222
+                {totalMinted}/8888
                 <div className="text-2 text-f14">NFTs Claimed</div>
               </div>
               <div className="flex gap-6 sm:gap-5 items-center">
