@@ -13,8 +13,9 @@ interface IGraphNFT {
 }
 export const useNFTGraph = () => {
   const { address: account } = useUserAccount();
-  const { data } = useSWR(`nfts-the-graph-account-${account}`, {
+  const { data } = useSWR(`nfts-the-graph-account-${account}-claimed`, {
     fetcher: async () => {
+      console.log(nftGraphqlURL, 'nftGraphqlURL');
       const response = await axios.post(nftGraphqlURL, {
         query: `{ 
           nfts(orderBy: tokenId, orderDirection: desc,where: {owner: "${account}"}) {

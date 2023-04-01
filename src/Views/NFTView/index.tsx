@@ -30,7 +30,7 @@ const nftSaleTimeStamp = 1674144000;
 export const nftGraphqlURL =
   import.meta.env.VITE_ENV.toLowerCase() === 'mainnet'
     ? 'https://api.thegraph.com/subgraphs/name/bufferfinance/mainnet-lite'
-    : 'https://api.thegraph.com/subgraphs/name/bufferfinance/sandbox-lite';
+    : 'https://api.thegraph.com/subgraphs/name/bufferfinance/testnet-lite';
 
 // const nftSaleTimeStamp = 1673954750;
 
@@ -45,7 +45,6 @@ const NFTView: React.FC<{}> = ({}) => {
   );
 };
 
-// value x 100
 const NFTViewPage: React.FC<INFTView> = ({}) => {
   const {
     conditions,
