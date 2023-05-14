@@ -7,14 +7,14 @@
       "USDC": {
         "address": "0x658e6B62e7ab1d2B29a08F85f8442edEed562b48",
         "decimals": 6,
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/bnb.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/bnb.svg",
         "name": "USDC",
         "pool_address": "0x1CDA6A34D84F444183E89D2D41D920EeaE883439"
       },
       "BFR": {
         "address": "0x89fEF05446aEA764C53a2f09bB763876FB57ea8E",
         "decimals": 18,
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/bnb.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/bnb.svg",
         "name": "BFR",
         "pool_address": "0xEAf4738C83B48055b54B5E9E48a96A7ee6CbB412"
       }
@@ -29,7 +29,7 @@
         "token1": "BTC",
         "token2": "USD",
         "full_name": "Bitcoin",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/btc.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/btc.svg",
         "pools": [
           {
             "token": "USDC",
@@ -49,7 +49,7 @@
         "token1": "ETH",
         "token2": "USD",
         "full_name": "Ethereum",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/eth.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/eth.svg",
         "pools": [
           {
             "token": "USDC",
@@ -69,7 +69,7 @@
         "token1": "EUR",
         "token2": "USD",
         "full_name": "Euro",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/euro.png",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/euro.png",
         "pools": [
           {
             "token": "USDC",
@@ -89,7 +89,7 @@
         "token1": "GBP",
         "token2": "USD",
         "full_name": "Pound",
-        "img": "https://cdn.buffer.finance/Buffer-Media/main/GBP.png",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Media/main/GBP.png",
         "pools": [
           {
             "token": "USDC",
@@ -110,14 +110,14 @@
       "USDC": {
         "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
         "decimals": 6,
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/bnb.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/bnb.svg",
         "name": "USDC",
         "pool_address": "0x6Ec7B10bF7331794adAaf235cb47a2A292cD9c7e"
       },
       "BFR": {
         "address": "0x1A5B0aaF478bf1FDA7b934c76E7692D722982a6D",
         "decimals": 18,
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/bnb.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/bnb.svg",
         "name": "BFR",
         "pool_address": "0x6Ec7B10bF7331794adAaf235cb47a2A292cD9c7e"
       }
@@ -132,7 +132,7 @@
         "token1": "BTC",
         "token2": "USD",
         "full_name": "Bitcoin",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/btc.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/btc.svg",
         "pools": [
           {
             "token": "USDC",
@@ -152,7 +152,7 @@
         "token1": "ETH",
         "token2": "USD",
         "full_name": "Ethereum",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/eth.svg",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/eth.svg",
         "pools": [
           {
             "token": "USDC",
@@ -172,7 +172,7 @@
         "token1": "EUR",
         "token2": "USD",
         "full_name": "Euro",
-        "img": "https://cdn.buffer.finance/Buffer-Website-Data/main/Assets/euro.png",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Website-Data/main/Assets/euro.png",
         "pools": [
           {
             "token": "USDC",
@@ -192,7 +192,7 @@
         "token1": "GBP",
         "token2": "USD",
         "full_name": "Pound",
-        "img": "https://cdn.buffer.finance/Buffer-Media/main/GBP.png",
+        "img": "https://buffer-images.s3.us-east-2.amazonaws.com/Buffer-Media/main/GBP.png",
         "pools": [
           {
             "token": "USDC",

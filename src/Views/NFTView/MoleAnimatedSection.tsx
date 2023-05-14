@@ -8,7 +8,7 @@ const upClass = 'mole-up-anim';
 const up = 'MoleUp';
 
 const getCDNImage = (image: number) => {
-  return `https://cdn.buffer.finance/optopi/wobg/${image}.png`;
+  return `https://buffer-images.s3.us-east-2.amazonaws.com/optopi/wobg/${image}.png`;
 };
 
 const getHeight = (idx) => {
