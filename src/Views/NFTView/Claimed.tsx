@@ -4,7 +4,7 @@ import { useNFTGraph } from './useNFTGraph';
 
 export const ClaimedNFT = () => {
   const { nfts } = useNFTGraph();
-  console.log(`nfts: `, nfts);
+  // console.log(`nfts: `, nfts);
 
   return (
     <Background className="flexc-center full-width">

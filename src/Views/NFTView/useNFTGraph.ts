@@ -15,7 +15,6 @@ export const useNFTGraph = () => {
   const { address: account } = useUserAccount();
   const { data } = useSWR(`nfts-the-graph-account-${account}-claimed`, {
     fetcher: async () => {
-      console.log(nftGraphqlURL, 'nftGraphqlURL');
       const response = await axios.post(nftGraphqlURL, {
         query: `{ 
           nfts(orderBy: tokenId, orderDirection: desc,where: {owner: "${account}"}) {
@@ -28,14 +27,12 @@ export const useNFTGraph = () => {
           }
         }`,
       });
-      // console.log(response.data, "response");
       return response.data?.data as {
         nfts: IGraphNFT[];
       };
     },
-    refreshInterval: 300,
+    refreshInterval: 1000,
   });
-  // console.log(`data: `, data);
 
   return { nfts: data?.nfts as IGraphNFT[] };
 };
@@ -53,11 +50,14 @@ export const useHighestTierNFT = () => {
     if (!nfts || nfts.length === 0) return null;
     const filteredNFTS = nfts.filter((nft) => nft.tier.length > 0);
     return filteredNFTS.reduce((prev, curr) => {
-      if (Tier[prev.tier.toUpperCase()] < Tier[curr.tier.toUpperCase()])
-        return curr;
+      const currentTier = curr.tier.toUpperCase();
+      if (prev.tier.toUpperCase() === 'DIAMOND') return prev;
+      else if (currentTier === 'SILVER') return { ...curr, tier: 'Silver' };
+      else if (currentTier === 'GOLD') return { ...curr, tier: 'Gold' };
+      else if (currentTier === 'PLATINUM') return { ...curr, tier: 'Platinum' };
+      else if (currentTier === 'DIAMOND') return { ...curr, tier: 'Diamond' };
       return prev;
     }, filteredNFTS[0]);
   }, [nfts]);
-  // console.log(highestTierNFT, "highestTierNFT");
   return { highestTierNFT };
 };

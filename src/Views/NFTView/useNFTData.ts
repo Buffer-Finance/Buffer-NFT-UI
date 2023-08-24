@@ -17,8 +17,20 @@ import { useNFTGraph } from './useNFTGraph';
 
 export const useNFTData = () => {
   const { address: account } = useUserAccount();
-  console.log(`contract: `);
-  const { contract } = useContract(NFTContract);
+  const {
+    contract,
+    error: contractError,
+    failureReason,
+    fetchStatus,
+  } = useContract(NFTContract);
+  console.log(
+    `contract: `,
+    contract,
+    NFTContract,
+    contractError,
+    failureReason,
+    fetchStatus
+  );
   const { data: totalCount } = useTotalCount(contract);
   const { data: supply } = useTotalCirculatingSupply(contract, 0);
   const { data: conditions, isLoading: isConditionsLoading } =

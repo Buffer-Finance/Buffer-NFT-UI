@@ -30,7 +30,13 @@ import { connectorsForWallets } from '@rainbow-me/rainbowkit';
 export const getChains = (): Chain[] =>
   import.meta.env.VITE_ENV.toLowerCase() == 'testnet'
     ? [
-        arbitrumGoerli,
+        {
+          ...arbitrumGoerli,
+          rpcUrls: {
+            default: { http: ['arbitrum-goerli.rpc.thirdweb.com'] },
+            public: { http: ['arbitrum-goerli.rpc.thirdweb.com'] },
+          },
+        },
         // polygonMumbai,
         // optimismGoerli,
         // avalancheFuji,

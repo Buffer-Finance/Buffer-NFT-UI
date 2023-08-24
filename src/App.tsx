@@ -1,5 +1,5 @@
 import { Navbar } from './Views/Common/Navbar';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Background from './AppStyles';
 import { Alert, Snackbar } from '@mui/material';
 import { atom, useAtom } from 'jotai';
@@ -9,19 +9,6 @@ import SideBar from '@Views/Common/Sidebar';
 import { NFTView } from '@Views/NFTView';
 import { useProvider, useSigner } from 'wagmi';
 import { ThirdwebSDKProvider } from '@thirdweb-dev/react';
-
-function AppComponent() {
-  return (
-    <div className=" text-blue-1 font-bold">
-      <div className="main">
-        <ul>
-          <Link to={'/faucet'}>Faucet</Link>
-          <Link to={'/home'}>Home</Link>
-        </ul>
-      </div>
-    </div>
-  );
-}
 
 export const desiredChainId =
   import.meta.env.VITE_ENV.toLowerCase() === 'mainnet' ? 42161 : 421613;
@@ -54,6 +41,7 @@ function App() {
         desiredChainId={desiredChainId}
         provider={provider}
         signer={signer}
+        clientId="c34920df0ebf0f6933080ee61bb43db5"
       >
         <AppRoutes />
       </ThirdwebSDKProvider>
@@ -85,7 +73,6 @@ function App() {
         state={true}
         className="disclaimer"
       />
-      {/* <ConnectionDrawer className="open" /> */}
 
       <TnCModal />
       <SideBar />
