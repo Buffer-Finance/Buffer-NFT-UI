@@ -139,7 +139,7 @@ const NFTViewPage: React.FC<INFTView> = ({}) => {
             className="mt-6 hover:scale-110 animate-bounce m-auto w-fit"
             role={'button'}
             onClick={() => {
-              if (typeof scollToRef.current !== 'undefined') return;
+              if (typeof scollToRef.current === 'undefined') return;
               (scollToRef.current as any).scrollIntoView({
                 behavior: 'smooth',
               });
@@ -150,7 +150,6 @@ const NFTViewPage: React.FC<INFTView> = ({}) => {
         </div>
       </div>
       <SaleSection scrollRef={scollToRef} />
-
       <ClaimedNFT />
     </div>
   );
