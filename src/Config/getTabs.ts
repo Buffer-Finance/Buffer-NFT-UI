@@ -38,7 +38,7 @@ export const getTabs = (): {
         to: `#`,
         name: 'Optopi NFT',
         subTabs: [],
-        isExternalLink: true,
+        isExternalLink: false,
       },
       {
         to: `https://app.buffer.finance/#/leaderboard/daily`,
@@ -62,7 +62,7 @@ export const getTabs = (): {
         to: `https://earn.buffer.finance/`,
         name: 'Earn',
         subTabs: [],
-        isExternalLink: false,
+        isExternalLink: true,
       },
       {
         to: 'https://twitter.com/Buffer_Finance',
@@ -137,7 +137,7 @@ export const getTabs = (): {
         to: `#`,
         name: 'Optopi NFT',
         subTabs: [],
-        isExternalLink: true,
+        isExternalLink: false,
       },
       {
         to: `https://testnet.buffer.finance/#/leaderboard/daily`,
@@ -162,7 +162,7 @@ export const getTabs = (): {
         to: `https://earn.buffer.finance/`,
         name: 'Earn',
         subTabs: [],
-        isExternalLink: false,
+        isExternalLink: true,
       },
       {
         to: 'https://twitter.com/Buffer_Finance',
