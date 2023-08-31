@@ -6,11 +6,11 @@ const SidebarCSS = styled.div`
     padding-bottom: 10px;
 
     border-top: 1px solid #4a4646;
-    border-bottom: 1px solid #4a4646;
+    /* border-bottom: 1px solid #4a4646; */
   }
   .collapse-icon {
     color: var(--text-1);
-    display: none;
+    /* display: none; */
     padding: 0;
   }
   .bufferlogotext {
@@ -35,7 +35,7 @@ const SidebarCSS = styled.div`
     position: fixed;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     /* background: var(--bg-17); */
     transition: 200ms ease-in;
     z-index: 1600;
@@ -48,7 +48,7 @@ const SidebarCSS = styled.div`
       align-items: center;
       height: calc(var(--navbar-height) - 0.5rem);
       padding-left: 1.4rem;
-      padding-right: 0.5rem
+      padding-right: 0.5rem;
       /* margin-bottom: 0.4rem; */
       margin-top: 0.3rem;
 
@@ -117,20 +117,22 @@ const SidebarCSS = styled.div`
       display: flex;
       /* background: var(--bg-17); */
       color: var(--text-6);
-      justify-content: center;
       margin: auto;
       width: auto;
       padding: 1em 2rem;
       text-transform: capitalize;
       border-radius: 1.2rem;
       height: 4.2rem;
+      @media (max-width: 600px) {
+        height: 3.6rem;
+      }
       align-items: center;
       /* font-family: "Inter", sans-serif; */
       font-weight: 400;
       font-size: 16px;
       transition: 80ms ease;
       /* margin-bottom: 0.3rem; */
-      margin: 0 0 3px 0;
+      margin: 3px 0px;
       &:hover {
         color: var(--text-blue);
       }
@@ -213,7 +215,7 @@ const SidebarCSS = styled.div`
     /* padding-left: 0.8rem;
     padding-right: 0.8rem; */
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1400px) {
     .sidebar-closed {
       width: 8rem;
       .name {
@@ -259,7 +261,7 @@ const SidebarCSS = styled.div`
       padding: 0;
     }
   } */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1400px) {
     .overlay {
       position: fixed;
       background-color: rgba(0, 0, 0, 0.4);
@@ -274,7 +276,6 @@ const SidebarCSS = styled.div`
       top: 0;
       padding-top: 2rem;
       margin-top: 0 !important;
-      justify-content: center !important;
       /* padding-left: 3rem !important; */
       transform: translateX(-1rem);
       .buffer-logo {
@@ -284,7 +285,8 @@ const SidebarCSS = styled.div`
       }
     }
     .sidebar {
-      transform: translateX(-100%) !important;
+      transform: translateX(-500%) !important;
+      left: 0;
       top: 0;
     }
     .sidebar-closed {
