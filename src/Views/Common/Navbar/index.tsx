@@ -58,7 +58,7 @@ export const Navbar: React.FC<INavbar> = () => {
           {tabs.length > VISIBLETABS && (
             <TabsDropdown tabs={tabs.slice(VISIBLETABS)} defaultName="More" />
           )}
-          <TabsDropdown tabs={social} defaultName="Socials" />
+          {/* <TabsDropdown tabs={social} defaultName="Socials" /> */}
         </div>
       </div>
 
@@ -75,7 +75,7 @@ export const Navbar: React.FC<INavbar> = () => {
             Mainnet
           </BlueBtn>
         )} */}
-        <BlueBtn
+        {/* <BlueBtn
           onClick={() => {
             window.open(
               'https://app.buffer.finance/#/leaderboard/weekly',
@@ -84,11 +84,9 @@ export const Navbar: React.FC<INavbar> = () => {
           }}
           className="!h-[30px] rounded-[6px] w-fit !text-f13 font-medium hover:brightness-125 hover:!translate-y-[0px] pl-4 pr-5 sm:pl-1 sm:pr-1"
         >
-          {/* <Link to="/leaderboard/weekly" className="flex items-center gap-1"> */}
           <LeaderboardTropy height={23} />
           <span className="sm:hidden">Contest</span>
-          {/* </Link> */}
-        </BlueBtn>
+        </BlueBtn> */}
 
         <div id="dropdown-box" className="flex gap-4 items-center text-1">
           {/* <ChainDropdown /> */}

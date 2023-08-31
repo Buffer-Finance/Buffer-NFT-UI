@@ -2,7 +2,6 @@ import { ClickAwayListener, IconButton } from '@mui/material';
 import { useState } from 'react';
 import SidebarCss from './styles';
 import { useGlobal } from '@Contexts/Global';
-import SidebarCollapseIcon from 'src/SVG/Elements/sidebarCollpaseIcon';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Fade from 'react-reveal/Fade';
 import { getTabs, ITab } from 'src/Config/getTabs';
@@ -13,7 +12,7 @@ import Discord from 'public/Social/discord';
 import Medium from 'public/Social/medium';
 import GitHub from 'public/Social/github';
 import Telegram from 'public/Social/telegram';
-
+import MemoHamburgerBack from '@SVG/Elements/sidebarCollpaseIcon';
 const social = [
   {
     Img: Twitter,
@@ -41,8 +40,6 @@ const social = [
     name: 'GitHub',
   },
 ];
-// import usePages from "Hooks/Utilities/usePageInfo";
-
 const SideBar: React.FC<any> = () => {
   const newPageNavElements = 9;
   const { state, dispatch } = useGlobal();
@@ -66,14 +63,14 @@ const SideBar: React.FC<any> = () => {
       )}
 
       <div
-        className={`bg-1 sidebar ${
+        className={`bg-1 sidebar  ${
           state.sidebar_active ? '' : 'sidebar-closed'
-        } min1000:!hidden`}
+        } a1200:!hidden`}
       >
-        <div className="sidebar_container flex-col">
-          <div className="icon_container mb-6">
+        <div className="sidebar_container flex-col items-start">
+          <div className="icon_container mb-6 ml-3">
             <div
-              className="flex items-center justify-center"
+              className="flex items-center justify-between w-full"
               role={'button'}
               onClick={
                 () => {}
@@ -83,17 +80,17 @@ const SideBar: React.FC<any> = () => {
               }
             >
               <BufferLogoComponent />
+              <IconButton className="collapse-icon" onClick={handleClose}>
+                <MemoHamburgerBack />
+              </IconButton>
             </div>
-            <IconButton className="collapse-icon" onClick={handleClose}>
-              <SidebarCollapseIcon />
-            </IconButton>
           </div>
           {options.map((option, key) => {
             if (key >= newPageNavElements || option.isExternalLink) {
               return (
                 <button
                   key={option.name}
-                  className={`item !w-full`}
+                  className={`item !w-full !ml-[0px] !mr-[0px]`}
                   onClick={() => {
                     handleChange(option.to);
                   }}
@@ -110,8 +107,9 @@ const SideBar: React.FC<any> = () => {
               <NavLink
                 key={option.name}
                 to={option.to}
+                onClick={handleClose}
                 className={({ isActive }) =>
-                  `item ${isActive ? 'active bg-4' : ''} 
+                  `item ${isActive ? 'active ' : ''} 
           `
                 }
               >
@@ -119,18 +117,22 @@ const SideBar: React.FC<any> = () => {
               </NavLink>
             );
           })}
-
-          <div className="flex flex-row items-center justify-center flex-wrap gap-3 px-8 bbborderrr">
-            {social.map((S) => {
-              return (
-                <a className="unset" href={S.link} target="_blank">
-                  <span className="text-2 ">
-                    <S.Img />
-                  </span>
-                </a>
-              );
-            })}
+          {/* <div className=" text-2 mb-3 mt-[10vh] text-left text-f13 pl-[2rem]">
+            Connect with us on{' '}
           </div>
+          <div className=" bbborderrr flex w-full justify-center">
+            <div className="flex  w-full flex-row items-center  flex-wrap gap-[4px] pl-[2rem]">
+              {social.map((S) => {
+                return (
+                  <a key={S} className="unset" href={S.link} target="_blank">
+                    <span className="text-2 ">
+                      <S.Img className="" />
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </div> */}
         </div>
       </div>
     </SidebarCss>
