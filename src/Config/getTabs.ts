@@ -77,7 +77,7 @@ export const getTabs = (): {
         isExternalLink: true,
       },
       {
-        to: 'https://docs.buffer.finance/introduction/readme',
+        to: 'https://docs.buffer.finance/readme',
         name: 'Docs',
         subTabs: [],
         isExternalLink: true,
@@ -177,7 +177,7 @@ export const getTabs = (): {
         isExternalLink: true,
       },
       {
-        to: 'https://docs.buffer.finance/introduction/readme',
+        to: 'https://docs.buffer.finance/readme',
         name: 'Docs',
         subTabs: [],
         isExternalLink: true,
